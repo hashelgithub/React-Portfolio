@@ -1,19 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import SocialLinksMobile from './SocialLinksMobile';
 
 const Contact = () => {
-  
-  const isContactPage = true; 
+  const [isContactPage, setIsContactPage] = useState(false);
+
+  useEffect(() => {
+    const currentPath = window.location.pathname;
+    setIsContactPage(currentPath === '/contact');
+  }, []);
 
   return (
-    <div id="contact" className="w-full h-screen bg-gradient-to-b from-black to-gray-800 text-white">
+    <div name="contact" className="w-full h-screen bg-gradient-to-b from-black to-gray-800 text-white">
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full space-y-8">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">Contact</p>
           <p className="py-6">Submit the form below to get in touch with me</p>
         </div>
         <div className="flex justify-center items-center">
-          <form action="https://getform.io/f/wbrkkgma" method="POST" className="flex flex-col w-full md:w-1/2 space-y-4">
+          <form 
+            action="https://getform.io/f/wbrkkgma"
+            method="POST" 
+            className="flex flex-col w-full md:w-1/2 space-y-4"
+          >
             <input
               type="text"
               name="name"

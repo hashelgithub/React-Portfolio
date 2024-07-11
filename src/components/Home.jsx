@@ -1,7 +1,7 @@
 import React from 'react'
 import MyPic from "../assets/MyPic.jpg"
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 function Home() {
   return (
