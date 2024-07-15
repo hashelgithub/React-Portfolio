@@ -2,6 +2,7 @@ import React from 'react';
 
 import PartPicker from '../assets/portfolio/PartPicker.png';
 import TomatoGame from '../assets/portfolio/TomatoGame.png';
+import ToDoList from '../assets/portfolio/To-Do-List.png';
 
 const Portfolio = () => {
   const portfolios = [
@@ -12,6 +13,10 @@ const Portfolio = () => {
     {
       id: 2,
       src: TomatoGame,
+    },
+    {
+      id: 3,
+      src: ToDoList,
     },
   ];
 
